@@ -16,13 +16,16 @@ public class Main {
                 end = makingList(scanner);
                 break;
             case 2:
-                
+                //end = readingList(scanner);
                 break;
             case 3:
+                //end = deletingList(scanner);
                 break;
             case 0:
+                end = true;
                 break;
             default:
+                System.out.println("올바른 번호를 입력해주세요");
                 break;
         }
         
