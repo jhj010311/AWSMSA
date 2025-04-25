@@ -1,4 +1,4 @@
-public class ToDoList {
+public class Main {
   public void main(String[] args) {
     System.out.println("To-do List");
     System.out.println("1. 교육과정 수료");
