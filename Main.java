@@ -11,6 +11,8 @@ public class Main {
 
         int select = scanner.nextInt();
 
+        System.out.println("\n");
+
         switch (select) {
             case 1:
                 end = makingList(scanner);
@@ -28,6 +30,8 @@ public class Main {
                 System.out.println("올바른 번호를 입력해주세요");
                 break;
         }
+
+        System.out.println("\n\n");
         
         return end;
     }
@@ -38,9 +42,7 @@ public class Main {
 
         
 
-        System.out.println("\n\n당신의 ToDoList를 작성해봅시다");
-
-        
+        System.out.println("당신의 ToDoList를 작성해봅시다");
         System.out.println("목표를 한 줄씩 적어주세요");
         System.out.println("**그만하시려면 END를 적어주세요**");
 
@@ -65,7 +67,7 @@ public class Main {
 
             try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
                 writer.write(text.toString());
-                System.out.println("ToDoList 파일이 생성되었습니다!");
+                System.out.println(filePath + " 파일이 생성되었습니다!");
             } catch(IOException e) {
                 System.out.println(e.getMessage());
             } finally {
@@ -85,6 +87,17 @@ public class Main {
         }
     }
 
+    /*
+     * readingList(){
+     *  List<> fileList;
+     * 
+     *  int index;  // 복잡한 파일명 입력할 필요 없이 파일 순서 번호로 파일을 선택할 수 있도록
+     * 
+     *  List<String> txt = readFile("");
+     * }
+     * 
+     */
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -94,7 +107,7 @@ public class Main {
             end = mainPage(end, scanner);
         }
 
-        System.out.println("\n\n프로그램을 종료합니다");
+        System.out.println("프로그램을 종료합니다");
         
         scanner.close();
 
